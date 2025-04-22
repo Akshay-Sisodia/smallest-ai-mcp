@@ -1,17 +1,17 @@
 # Smallest AI MCP Server
 
-This project implements a full-featured ModelContextProtocol (MCP) server for the [Waves](https://waves.smallest.ai/) Text-to-Speech and Voice Cloning platform. It exposes all Waves features as MCP tools and resources, allowing any compatible LLM or agent to:
+This project implements a ModelContextProtocol (MCP) server for the [Waves](https://waves.smallest.ai/) Text-to-Speech and Voice Cloning platform. It exposes Waves features as MCP tools and resources, allowing any compatible LLM or agent to:
 
-- List and preview all available voices
+- List and preview available voices
 - Synthesize speech (sync and streaming)
 - Clone voices (instant and professional)
 - Manage cloned voices (list, delete)
 - Access project info and best practices
 
 ## Features
-- **Full Waves API coverage**: No placeholders, all endpoints are real
-- **MCP Tools**: `ttsSync`, `ttsStream`, `listVoices`, `createClone`, `listClones`, `deleteClone`, and more
-- **Resources**: `projects`, `bestPractices`, etc.
+- **Waves API coverage**: No placeholders, all endpoints in code are real
+- **MCP Tools**: `ttsToWav`, `listVoices`, `createClone`, `listClones`, `deleteClone`
+- **Resources**: `projects`, `bestPractices`
 - **Prompts**: Prebuilt for common TTS and cloning tasks
 
 ## Usage
@@ -21,11 +21,10 @@ This project implements a full-featured ModelContextProtocol (MCP) server for th
 4. Run the server: `python server.py`
 
 ## Tech Stack
-- Python 3.11, FastAPI/Starlette, httpx, requests
+- Python 3.11, Starlette, httpx, requests
 - [modelcontextprotocol/mcp-sdk](https://github.com/modelcontextprotocol/mcp-sdk)
 
 ## Production & Deployment
-
 - **Environment:** Copy `.env.example` to `.env` and add your real API key(s). Never commit `.env` to git.
 - **Dependencies:** Install via `pip install -r requirements.txt` (Python 3.11+ recommended).
 - **Docker:** Use the provided Dockerfile for easy containerization.
@@ -52,7 +51,6 @@ docker run -p 8000:8000 \
 - You can publish this image to Docker Hub for even easier sharing.
 
 ## Contributing
-
 Pull requests and issues are welcome! Please open an issue to discuss major changes.
 
 ## Maintainer
