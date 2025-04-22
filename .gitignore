@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+*.pot
+*.mo
+*.coverage
+.coverage.*
+.cache
+*.mypy_cache/
+*.pytest_cache/
+
+# Environment
+.env
+.env.*
+.venv/
+venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+
+# Misc
+node_modules/
+tmp/
+
+# Waves/MCP output
+*.wav
+
+# Existing lines
+dist/
+.env
