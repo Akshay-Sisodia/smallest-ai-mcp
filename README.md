@@ -6,17 +6,16 @@ This project implements a full-featured ModelContextProtocol (MCP) server for th
 - Synthesize speech (sync and streaming)
 - Clone voices (instant and professional)
 - Manage cloned voices (list, delete)
-- Use LiveKit, Plivo, Vonage integrations
 - Access project info and best practices
 
 ## Features
 - **Full Waves API coverage**: No placeholders, all endpoints are real
-- **MCP Tools**: `ttsSync`, `ttsStream`, `listVoices`, `createClone`, `listClones`, `deleteClone`, integrations, and more
+- **MCP Tools**: `ttsSync`, `ttsStream`, `listVoices`, `createClone`, `listClones`, `deleteClone`, and more
 - **Resources**: `projects`, `bestPractices`, etc.
 - **Prompts**: Prebuilt for common TTS and cloning tasks
 
 ## Usage
-1. Clone this repo
+1. Clone this repo: `git clone https://github.com/Akshay-Sisodia/smallest-ai-mcp.git`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Set your Waves API key in `.env` as `WAVES_API_KEY=...`
 4. Run the server: `python server.py`
@@ -49,35 +48,6 @@ docker run -p 8000:8000 \
   smallest-ai-mcp
 ```
 
-- The server will be available at `http://localhost:8000/`.
-- Only set the env vars you need (optional integrations).
-- You can now use this image on any machine or cloud provider with Docker.
-
----
-
-## Portable MCP Config Example
-
-To use this server with Cascade or any MCP client, add this to your `mcp_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "waves": {
-      "command": "docker",
-      "args": [
-        "run", "-p", "8000:8000",
-        "-e", "WAVES_API_KEY=<YOUR_WAVES_API_KEY>",
-        "smallest-ai-mcp"
-      ]
-    }
-  }
-}
-```
-
----
-
-## Notes
-- The Docker image is fully portable and works on any OS with Docker installed.
 - For production, use secrets management for API keys.
 - You can publish this image to Docker Hub for even easier sharing.
 
@@ -86,7 +56,7 @@ To use this server with Cascade or any MCP client, add this to your `mcp_config.
 Pull requests and issues are welcome! Please open an issue to discuss major changes.
 
 ## Maintainer
-Akshay Sisodia
+Akshay Sisodia ([GitHub](https://github.com/Akshay-Sisodia))
 
 ## License
 MIT
