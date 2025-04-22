@@ -1,18 +1,15 @@
 # Smallest AI MCP Server
 
-This project implements a ModelContextProtocol (MCP) server for the [Waves](https://waves.smallest.ai/) Text-to-Speech and Voice Cloning platform. It exposes Waves features as MCP tools and resources, allowing any compatible LLM or agent to:
+This project implements a ModelContextProtocol (MCP) server for the [Waves](https://waves.smallest.ai/) Text-to-Speech and Voice Cloning platform. It exposes Waves features as MCP tools, allowing any compatible LLM or agent to:
 
 - List and preview available voices
-- Synthesize speech (sync and streaming)
+- Synthesize speech (WAV file output)
 - Clone voices (instant and professional)
 - Manage cloned voices (list, delete)
-- Access project info and best practices
 
 ## Features
 - **Waves API coverage**: No placeholders, all endpoints in code are real
 - **MCP Tools**: `ttsToWav`, `listVoices`, `createClone`, `listClones`, `deleteClone`
-- **Resources**: `projects`, `bestPractices`
-- **Prompts**: Prebuilt for common TTS and cloning tasks
 
 ## Usage
 1. Clone this repo: `git clone https://github.com/Akshay-Sisodia/smallest-ai-mcp.git`
@@ -28,7 +25,7 @@ This project implements a ModelContextProtocol (MCP) server for the [Waves](http
 - **Environment:** Copy `.env.example` to `.env` and add your real API key(s). Never commit `.env` to git.
 - **Dependencies:** Install via `pip install -r requirements.txt` (Python 3.11+ recommended).
 - **Docker:** Use the provided Dockerfile for easy containerization.
-- **Testing:** (Add tests for your endpoints and tools as needed.)
+- **Testing:** (You may wish to add tests for your endpoints and tools.)
 - **Security:** Do not expose your API keys or sensitive data. The server checks for required env vars on startup.
 - **License:** MIT (see LICENSE file).
 
