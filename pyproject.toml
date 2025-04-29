@@ -1,0 +1,60 @@
+[project]
+name = "smallest-ai-mcp"
+version = "0.1.0"
+description = "MCP Server for Waves API"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Core MCP/Server dependencies
+    "mcp==1.6.0",
+    "starlette==0.46.2",
+    "uvicorn==0.34.2",
+    "python-dotenv==1.1.0",
+    "httpx==0.28.1",
+    # Dependencies pulled in by the above
+    "anyio",
+    "click",
+    "h11",
+    "httpcore",
+    "idna",
+    "sniffio",
+    "typing-extensions",
+    "sse-starlette==2.2.1",
+    "httpx-sse==0.4.0",
+    "pydantic==2.11.3",
+    "pydantic-core",
+    "pydantic-settings",
+    "annotated-types",
+    # Optional/Utility (Keep if needed)
+    "requests==2.32.3",
+    "sounddevice==0.5.1",
+    "numpy==2.2.5",
+    # Dev/Build related - usually not here but included in requirements.txt
+    "certifi",
+    "cffi",
+    "charset-normalizer",
+    "colorama",
+    "markdown-it-py",
+    "mdurl",
+    "pycparser",
+    "pygments",
+    "rich",
+    "shellingham",
+    "typer==0.15.2",
+    "typing-inspection",
+    "urllib3",
+    "streamlit>=1.44.1",
+    "openai>=1.76.0",
+    "groq>=0.23.1",
+    "websockets>=15.0.1",
+    "sseclient>=0.0.27",
+    "nest-asyncio>=1.6.0",
+]
+
+# Optional: Add development dependencies if needed
+# [project.optional-dependencies]
+# dev = ["pytest", "ruff", ...]
+
+# Tool specific configurations (e.g., for uv, ruff, pytest) can go here
+# [tool.uv]
+# ...
